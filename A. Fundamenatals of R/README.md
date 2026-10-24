@@ -74,30 +74,7 @@ Launch RStudio from the applications menu or run:
 rstudio
 ```
 
-### 1.3. Verify R and RStudio
-
-Run these commands in the RStudio Console:
-
-```r
-R.version.string
-version
-R.home()
-print("R and RStudio are working correctly!")
-```
-
-Check whether R is available from the terminal:
-
-```bash
-R --version
-```
-
 ### 1.4. Run an R Script
-
-Create a file named `script.R` containing:
-
-```r
-message("Hello from R")
-```
 
 Run it from the terminal:
 
@@ -138,15 +115,9 @@ Check installed packages:
 
 ```r
 installed.packages()
+
+"ggplot2" %in% rownames(installed.packages())
 ```
-
-### 1.7. Basic Setup Check
-
-```r
-cat("R is working\n")
-```
-
----
 
 ## 2. Variables and Data Types
 
@@ -298,6 +269,7 @@ y <- NULL
 is.null(y)
 ```
 
+
 ### 2.9. Type Conversion
 
 Values sometimes need to be converted from one data type to another.
@@ -366,14 +338,13 @@ alt <- "T"
 variant <- paste0(ref, ">", alt)
 
 variant
+
+df$variant <- paste0(df$ref, ">", df$alt)
 ```
 
 ### 2.13. Common Data Types
 
 The basic types encountered frequently in data analysis include:
-
-
-
 
 ## 3. Operators
 
